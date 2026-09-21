@@ -1,0 +1,44 @@
+PNR:1272261853
+Assignment 4
+Problem Statement: Write a Python program to create an array and perform addition of two matrices. (Using list and NumPy array.) 
+Aim: Write a Python program to create an array and perform addition of two matrices.
+
+# PART 1: Matrix Addition using Python List
+print("----- MATRIX ADDITION USING LIST -----") 
+
+# Two matrices represented as list of lists (2x3 matrix)
+matrix1 = [[1, 2, 3],       
+           [4, 5, 6]]
+matrix2 = [[7, 8, 9],   
+           [10, 11, 12]]
+
+# Create an empty result matrix with same dimensions
+rows = len(matrix1)
+cols = len(matrix1[0])
+result_list = [[0 for _ in range(cols)] for _ in range(rows)] 
+  
+# Add corresponding elements of both matrices
+for i in range(rows):   
+                for j in range(cols):   
+                result_list[i][j] = matrix1[i][j] + matrix2[i][j] 
+print("Matrix 1:", matrix1)
+print("Matrix 2:", matrix2)
+print("Sum (using list):")
+for row in result_list:  
+  print(row)
+
+ # PART 2: Matrix Addition using NumPy Array
+print("\n----- MATRIX ADDITION USING NUMPY -----") 
+import numpy as np
+
+# Create two NumPy arrays (matrices) of the same dimensions
+np_matrix1 = np.array([[1, 2, 3],             
+                       [4, 5, 6]]) 
+np_matrix2 = np.array([[7, 8, 9],                  
+                       [10, 11, 12]])
+                
+# Add the two matrices using '+' operator
+result_np = np_matrix1 + np_matrix2
+print("NumPy Matrix 1:\n", np_matrix1) 
+print("NumPy Matrix 2:\n", np_matrix2)
+print("Sum (using NumPy):\n", result_np)         
