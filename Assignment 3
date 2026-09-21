@@ -1,0 +1,29 @@
+PNR:
+Assignment 3
+Problem Statement:To check whether or not the triangle is a right-angled triangle using function.
+Aim: Write a Python program that accepts the length of three sides of a triangle as inputs. The program should indicate whether or not the triangle is a right-angled triangle using function.
+
+# User-defined function to check rightangled triangle 
+def is_right_angled(a, b, c):   
+ # Sort the sides so that 'largest' holds the biggest side (hypotenuse)  
+ sides = sorted([a, b, c])   
+ smallest, middle, largest = sides[0], sides[1], sides[2]   
+
+# Pythagoras theorem: largest^2 == smallest^2 + middle^2   
+if (largest ** 2) == (smallest ** 2 + middle ** 2):      
+   return True  
+else:     
+  return False
+
+# Accept the length of three sides of a triangle from the user
+side1 = float(input("Enter length of side 1: "))
+side2 = float(input("Enter length of side 2: ")) 
+side3 = float(input("Enter length of side 3: "))
+
+# Function calling 
+result = is_right_angled(side1, side2, side3)
+
+if result:  
+   print("The triangle IS a right-angled triangle.")
+else:  
+   print("The triangle is NOT a rightangled triangle.")
