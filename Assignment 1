@@ -1,0 +1,57 @@
+PNR: 1272261853 
+Python Assignment 1
+Problem Statement: Different Operations on Dictionary and Tuple Data Structure.
+Aim: Write a python program to create, append and remove etc. operation on Dictionary and Tuple
+
+# 1. TUPLE OPERATIONS
+print("\n----- TUPLE OPERATIONS -----")
+
+my_tuple = (1, 2, 3, 4, 5)
+print("Original Tuple:", my_tuple)
+ 
+# Adding an element (via list conversion)
+temp_list = list(my_tuple)
+temp_list.append(6) 
+my_tuple = tuple(temp_list)
+print("After adding element 6:", my_tuple)
+
+# Removing an element (via list conversion)
+temp_list = list(my_tuple) 
+temp_list.remove(2)
+my_tuple = tuple(temp_list) 
+print("After removing element 2:", my_tuple)
+
+# count() - count occurrences of a value
+print("Count of 3:", my_tuple.count(3))
+
+# index() - find index of a value 
+print("Index of 4:", my_tuple.index(4)) 
+
+# len() - length of the tuple
+print("Length of tuple:", len(my_tuple))
+
+# 2. DICTIONARY OPERATIONS
+print("\n----- DICTIONARY OPERATIONS ----")
+
+my_dict = {"name": "Yuvraj", "age": 18, "course": "Engineering"}
+print("Original Dictionary:", my_dict)
+
+# Adding/updating a key-value pair
+my_dict["year"] = 1
+print("After adding 'year' key:", my_dict) 
+
+# update() - update dictionary with another dictionary 
+my_dict.update({"age": 19})
+print("After update(age=19):", my_dict)
+
+# get() - get value for a key safely 
+print("Value for 'course':", my_dict.get("course"))
+
+# keys(), values(), items() 
+print("Keys:", list(my_dict.keys()))
+print("Values:", list(my_dict.values()))
+print("Items:", list(my_dict.items()))
+
+# pop() - remove a key and return its value 
+removed_value = my_dict.pop("year")
+print("After pop('year'):", my_dict, "| Removed value:", removed_value)
